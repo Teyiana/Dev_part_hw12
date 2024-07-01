@@ -1,8 +1,9 @@
 package dao;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import entities.Planet;
+import entity.Planet;
 import util.HibernateSessionFactoryUtil;
+
 import java.util.List;
 
 

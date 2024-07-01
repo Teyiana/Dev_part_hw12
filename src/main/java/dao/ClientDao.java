@@ -2,7 +2,7 @@ package dao;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import entities.Client;
+import entity.Client;
 import util.HibernateSessionFactoryUtil;
 
 import java.util.List;

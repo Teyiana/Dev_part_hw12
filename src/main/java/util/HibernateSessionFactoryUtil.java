@@ -2,24 +2,14 @@ package util;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
-import entities.Client;
-import entities.Planet;
+import entity.Client;
+import entity.Planet;
 import org.flywaydb.core.Flyway;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.boot.spi.SessionFactoryOptions;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl;
-import org.hibernate.engine.jdbc.connections.spi.ConnectionProvider;
-import org.hibernate.engine.spi.SessionFactoryImplementor;
-import org.hibernate.internal.SessionFactoryImpl;
 
-import javax.sql.DataSource;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.util.Map;
-import java.util.Objects;
 import java.util.Properties;
 
 
@@ -63,7 +53,7 @@ public class HibernateSessionFactoryUtil {
         Flyway flyway = Flyway.configure()
                 .baselineOnMigrate(true)
                 .dataSource(ds)
-                .locations("db.migrations")
+                .locations("db/migrations")
                 .load();
         flyway.migrate();
         ds.close();

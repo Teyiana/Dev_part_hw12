@@ -1,10 +1,10 @@
 
-import models.ClientDTO;
-import models.PlanetDTO;
+import model.ClientDTO;
+import model.PlanetDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import services.ClientCrudService;
-import services.PlanetCrudService;
+import service.ClientCrudService;
+import service.PlanetCrudService;
 
 import java.util.List;
 

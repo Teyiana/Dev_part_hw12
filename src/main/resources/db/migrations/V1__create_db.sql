@@ -5,16 +5,15 @@
 -- );
 -- CREATE UNIQUE INDEX PRIMARY_KEY_7 ON PUBLIC.CLIENT (ID);
 
-create table client(
+CREATE TABLE client(
                        ID IDENTITY PRIMARY KEY,
-                       NAME varchar(200) NOT NULL,
+                       NAME VARCHAR(200) NOT NULL,
                        CHECK (LENGTH(NAME) > 3)
 );
 
 
 CREATE TABLE planet (
-                        ID VARCHAR  PRIMARY KEY,
-                        CHECK (ID ~ '[A-Z]'),
+                        ID VARCHAR(50)  PRIMARY KEY,
                         NAME VARCHAR(500) NOT NULL,
                         CHECK (LENGTH(NAME) > 1)
 );

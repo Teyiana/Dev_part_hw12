@@ -1,7 +1,7 @@
-package services;
+package service;
 import dao.ClientDao;
-import entities.Client;
-import models.ClientDTO;
+import entity.Client;
+import model.ClientDTO;
 import java.util.List;
 import java.util.stream.Collectors;
 public class ClientCrudService {
@@ -21,7 +21,7 @@ public class ClientCrudService {
     }
 
     public ClientDTO createClient(String client) {
-        if (client.length() < 3 || client.length() > 300) {
+        if (client.length() < 3 || client.length() > 200) {
             throw new IllegalArgumentException("Name must be between 2 and 1000 characters long.");
         }
         Client entity = clientDao.create(client);
