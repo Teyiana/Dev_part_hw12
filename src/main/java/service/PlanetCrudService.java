@@ -28,7 +28,7 @@ public class PlanetCrudService {
         if (planetName.length() < 1 || planetName.length() > 500) {
             throw new IllegalArgumentException("Name must be between 1 and 500 characters long.");
         }
-        if(planetId.matches("([A-Z]*|[0-9])")){
+        if(!planetId.matches("[A-Z0-9]+")){
             throw new IllegalArgumentException("ID must be uppercase.");
         }
         Planet entity = planetDao.create(planetId, planetName);

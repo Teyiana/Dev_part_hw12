@@ -15,7 +15,9 @@ CREATE TABLE client(
 CREATE TABLE planet (
                         ID VARCHAR(50)  PRIMARY KEY,
                         NAME VARCHAR(500) NOT NULL,
-                        CHECK (LENGTH(NAME) > 1)
+                        CHECK (LENGTH(NAME) > 1),
+                        CHECK ( ID REGEXP '^[A-Z0-9]+$')
+
 );
 
 
